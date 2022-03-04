@@ -386,6 +386,7 @@ def puzzle():
                 + str(start)
                 + " were found."
             )
+            out_nos.append(0)
     print("\n")
 
     return sols_mega, out_nos, n, m
