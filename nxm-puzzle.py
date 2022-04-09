@@ -95,32 +95,36 @@ def puzzle():
     if n == m:
         print(
             "\n"
-            "If you wish to generate solutions starting from particular cells, enter them in the format i,j for 0 <= i, j <= "
+            "If you wish to generate solutions starting from particular cells, enter them in the format "
+            + "i,j for 0 <= i, j <= "
             + str(n - 1)
-            + " (e.g. 0,1). After entering a cell, input the length of the solutions you wish to get starting from that cell. Finally, "
-            "enter the number of solutions of your chosen length you wish to generate starting from that cell. If you want to generate "
-            "all solutions of your chosen length from a particular starting cell, input 'all' after entering the cell coordinates and "
-            "the solution length. If you want to generate solutions from a randomly chosen starting cell, enter 'any' as the cell "
-            "coordinates. If you want to generate solutions from all possible starting cells, enter 'all' as the cell coordinates. "
-            "Note that due to the 8 symmetries of the square, to produce solutions starting from all cells it suffices to consider "
-            "sequences starting from cells in the region 0 <= i <= j <= "
+            + " (e.g. 0,1). After entering a cell, input the length of the solutions you wish to get starting "
+            + "from that cell. Finally, enter the number of solutions of your chosen length you wish to generate "
+            + "starting from that cell. If you want to generate all solutions of your chosen length from a particular "
+            + "starting cell, input 'all' after entering the cell coordinates and the solution length. If you want "
+            + "to generate solutions from a randomly chosen starting cell, enter 'any' as the cell coordinates. "
+            + "If you want to generate solutions from all possible starting cells, enter 'all' as the cell coordinates. "
+            + "Note that due to the 8 symmetries of the square, to produce solutions starting from all cells it "
+            " suffices to consider sequences starting from cells in the region 0 <= i <= j <= "
             + str(int(floor((n - 1) / 2)))
             + ". Enter 'ok' when you are done."
         )
     else:
         print(
             "\n"
-            "If you wish to generate solutions starting from particular cells, enter them in the format i,j for 0 <= i <= "
+            "If you wish to generate solutions starting from particular cells, enter them in the format "
+            + "i,j for 0 <= i <= "
             + str(n - 1)
             + ", 0 <= j <= "
             + str(m - 1)
-            + " (e.g. 0,1). After entering a cell, input the length of the solutions you wish to get starting from that cell. Finally, "
-            "enter the number of solutions of your chosen length you wish to generate starting from that cell. If you want to generate "
-            "all solutions of your chosen length from a particular starting cell, input 'all' after entering the cell coordinates and "
-            "the solution length. If you want to generate solutions from a randomly chosen starting cell, enter 'any' as the cell "
-            "coordinates. If you want to generate solutions from all possible starting cells, enter 'all' as the cell coordinates. "
-            "Note that due to the 4 symmetries of the rectangle, to produce solutions starting from all cells it suffices to consider "
-            "sequences starting from cells in the region 0 <= i <= "
+            + " (e.g. 0,1). After entering a cell, input the length of the solutions you wish to get starting "
+            + "from that cell. Finally, enter the number of solutions of your chosen length you wish to generate "
+            + "starting from that cell. If you want to generate all solutions of your chosen length from a particular "
+            + "starting cell, input 'all' after entering the cell coordinates and the solution length. If you want to "
+            + "generate solutions from a randomly chosen starting cell, enter 'any' as the cell coordinates. If you want "
+            + "to generate solutions from all possible starting cells, enter 'all' as the cell coordinates. Note that due "
+            + "to the 4 symmetries of the rectangle, to produce solutions starting from all cells it suffices to consider "
+            + "sequences starting from cells in the region 0 <= i <= "
             + str(int(floor((n - 1) / 2)))
             + ", 0 <= j <= "
             + str(int(floor((m - 1) / 2)))
@@ -153,15 +157,15 @@ def puzzle():
                     else:
                         if n == m:
                             print(
-                                "Please enter a valid starting cell in the correct format, or 'all' if you wish to get solutions "
-                                "starting from all cells in the region 0 <= i, j <= "
+                                "Please enter a valid starting cell in the correct format, or 'all' if you wish to "
+                                + "get solutions starting from all cells in the region 0 <= i, j <= "
                                 + str(int(floor((n - 1) / 2)))
                                 + ", or 'ok' if you are done."
                             )
                         else:
                             print(
-                                "Please enter a valid starting cell in the correct format, or 'all' if you wish to get solutions "
-                                "starting from all cells in the region 0 <= i <= "
+                                "Please enter a valid starting cell in the correct format, or 'all' if you wish to "
+                                + "get solutions starting from all cells in the region 0 <= i <= "
                                 + str(int(floor((n - 1) / 2)))
                                 + ", 0 <= j <= "
                                 + str(int(floor((m - 1) / 2)))
@@ -170,15 +174,15 @@ def puzzle():
                 except:
                     if n == m:
                         print(
-                            "Please enter a valid starting cell in the correct format, or 'all' if you wish to get solutions "
-                            "starting from all cells in the region 0 <= i, j <= "
+                            "Please enter a valid starting cell in the correct format, or 'all' if you wish to "
+                            + "get solutions starting from all cells in the region 0 <= i, j <= "
                             + str(int(floor((n - 1) / 2)))
                             + ", or 'ok' if you are done."
                         )
                     else:
                         print(
-                            "Please enter a valid starting cell in the correct format, or 'all' if you wish to get solutions "
-                            "starting from all cells in the region 0 <= i <= "
+                            "Please enter a valid starting cell in the correct format, or 'all' if you wish to "
+                            + "get solutions starting from all cells in the region 0 <= i <= "
                             + str(int(floor((n - 1) / 2)))
                             + ", 0 <= j <= "
                             + str(int(floor((m - 1) / 2)))
