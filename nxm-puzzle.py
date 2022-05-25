@@ -1,6 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 from math import floor, inf
 import random
+import copy
 
 
 def boundary(i, j, n, m, bd):
@@ -33,7 +34,7 @@ def search(i, j, n, m, rules, length, sol_no, sol=None, r=0):
                 if r == sol_no:
                     break
                 i, j = nbh[0], nbh[1]
-                sol_temp = sol.copy()
+                sol_temp = copy.deepcopy(sol)
                 sols_ext, r = search(i, j, n, m, rules, length, sol_no, sol_temp, r)
                 sols.extend(sols_ext)
         else:
