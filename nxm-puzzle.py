@@ -22,7 +22,7 @@ def nbhd(i, j, rules, n, m, bd):
 
 def search(i, j, n, m, rules, length, sol_no, sol=None, r=0):
     sols = []
-    if sol == None:
+    if sol is None:
         sol = []
     sol.append((i, j))
     nbhs = nbhd(i, j, rules, n, m, sol)
