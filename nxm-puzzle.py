@@ -309,8 +309,7 @@ def puzzle():
     sols_mega = []
     out_nos = []
 
-    for ind in range(len(starts)):
-        start = starts[ind]
+    for ind, start in enumerate(starts):
         length = lengths[ind]
         sols_no = sol_nos[ind]
         sols = search(start[0], start[1], n, m, rules, length, sols_no)[0]
@@ -366,8 +365,7 @@ def draw_puzzle(sols_mega, out_nos, n, m):
     m_1 = (2 * b + 1) * m
     font = ImageFont.truetype("OpenSans-Regular.ttf", b)
 
-    for ind in range(len(sols_mega)):
-        sols = sols_mega[ind]
+    for ind, sols in enumerate(sols_mega):
         if sols:
             out_no = out_nos[ind]
             for sol in sols[:out_no]:
@@ -387,8 +385,8 @@ def draw_puzzle(sols_mega, out_nos, n, m):
                                     fill="Black",
                                 )
 
-                    for k in range(len(sol)):
-                        i, j = sol[k][0], sol[k][1]
+                    for k, cell in enumerate(sol):
+                        i, j = cell[0], cell[1]
                         w, h = draw.textsize(str(k + 1), font=font)
                         # Draw start
                         if k == 0:
